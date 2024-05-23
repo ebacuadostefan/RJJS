@@ -79,7 +79,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'djangolesson_db',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'admin',
         'PORT': '3307',
         'HOST': 'localhost',
     }
