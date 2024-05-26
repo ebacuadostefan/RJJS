@@ -1,9 +1,35 @@
 {% extends "layout/base.html" %}
  
 {% block title %}
-List of user | Django Crud app
+List of Gender 
 {% endblock title %}
 
 {% block content %}
-<h1> Hello world, this is html file from gender folder!</h1>
+
+<a href= "/gender/create" class = "btn btn-primary float-end mt-1 me-1">Add Gender</a>
+{% include "include/messages.html" %}
+<div class = "col-md-6 mx-auto">
+    <div class = "table-responsive">
+        <table class = "table table-hover">
+            <thead>
+                <tr>
+                    <th> Gender ID </th>
+                    <th> Gender </th>
+                    <th> Date Created </th>
+                    <th> Date updated </th> 
+                </tr>
+            </thead>
+            <tbody>
+                {% for gender in genders %}
+                    <tr>
+                        <td>{{gender.gender_id}}</td>
+                        <td>{{gender.gender}}</td>
+                        <td>{{gender.date_created}}</td>
+                        <td>{{gender.date_updated}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
 {% endblock content %}
