@@ -1,22 +1,19 @@
 {% extends "layout/base.html" %}
 
 {% block title%}
-Create Gender
+Edit Gender
 {% endblock title%}
 
 {% block content%}
 
 <div class="col-md-4 mx-auto mt-3">
-    <form action="/gender/store" method="post">
+    <form action="/gender/update/{{ gender.gender_id }}" method="post">
         {% csrf_token %}
         <div class="mb-3">
             <label for="gender">Gender</label>
-            <input type="text" class="form-control" id="gender" name="gender" />
+            <input type="text" class="form-control" id="gender" name="gender" value="{{ gender.gender }}" />
         </div>
-        <div class ="row">
-
-        </div>
-        <button type="submit" class="btn btn-success float-end col-12 col-md-3 ">Save Gender</button>
+        <button type="submit" class="btn btn-success float-end col-12 col-md-3 ">update Gender</button>
         <a href="/genders" class="btn btn-secondary float-end col-12 col-me-3 md-1">Back</a>
 
     </form>
