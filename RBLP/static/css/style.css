@@ -1,0 +1,89 @@
+/* Style for the table container */
+.table-responsive {
+    margin-top: 80px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: whitesmoke;
+    padding: 15px;
+}
+
+/* Style for the table */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Style for table headers */
+.table thead th {
+    background-color: #64696e;
+    color: #fff;
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    text-align: left;
+}
+
+.table th, .table td {
+    padding: 10px;
+    vertical-align: middle;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Style for the action buttons */
+.btn-group .btn {
+    margin-right: 5px;
+    
+}
+
+.btn-primary, .btn-success, .btn-danger {
+    color: #fff;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #000000;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #000000;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #000000;
+}
+
+
+/* Hover effects for buttons */
+a.btn:hover, .btn-group .btn:hover {
+    color: #fff;
+    opacity: 0.9;
+}
+/* Style for table headers to center-align text */
+.table thead th {
+    color: whitesmoke;
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    text-align: center; /* Center align text */
+}
+body{
+    background: beige;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .table-responsive {
+        margin-top: 10px;
+        padding: 10px;
+    }
+    
+    .btn-group .btn {
+        margin-bottom: 5px;
+    }
+}

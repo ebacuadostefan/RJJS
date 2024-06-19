@@ -1,0 +1,39 @@
+{% extends "layout/base.html" %}
+
+{% block title %}
+View User 
+{% endblock title %}
+
+{% block content %}
+
+<div class="col-md-4 mx-auto mt-3">
+    <form method="post">
+        <div class="mb-3">
+            <label for="user">First Name</label>
+            <input type="text" class="form-control" value="{{ user.first_name }}" readonly />
+        </div>
+        <div class="mb-3">
+            <label for="user">Middle Name</label>
+            <input type="text" class="form-control" value="{{ user.middle_name }}" readonly />
+        </div>
+        <div class="mb-3">
+            <label>Last Name</label>
+            <input type="text" class="form-control" value="{{ user.last_name }}" readonly />
+        </div>
+        <div class="mb-3">
+            <label>Age</label>
+            <input type="text" class="form-control" value="{{ user.age }}" readonly />
+        </div>
+        <div class="mb-3">
+            <label>Birth Date</label>
+            <input type="text" class="form-control" value="{{ user.birth_date }}" readonly />
+        </div>
+        <div class="mb-3">
+            <label for="user">Gender</label>
+            <input type="text" class="form-control" value="{{ user.gender }}" readonly />
+        </div>
+        <a href="/users" class="btn btn-secondary float-end col-12 col-me-3 md-1">Back</a>
+    </form>
+</div>
+
+{% endblock content %}

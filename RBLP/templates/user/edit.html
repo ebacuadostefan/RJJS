@@ -1,0 +1,48 @@
+{% extends "layout/base.html" %}
+
+{% block title%}
+Edit User
+{% endblock title%}
+
+{% block content%}
+
+<div class="col-md-4 mx-auto mt-3">
+    <form action="/user/update/{{ user.user_id }}" method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="first_name">First name</label>
+            <input type="text" class="form-control" id="first_name" name="first_name" value="{{ user.first_name }}" required/>
+        </div>
+        <div class="mb-3">
+            <label for="middle_name">Middle Name</label>
+            <input type="text" class="form-control" id="middle_name" name="middle_name" value="{{ user.middle_name }}"/>
+        </div>
+        <div class="mb-3">
+            <label for="last_name">Last Name</label>
+            <input type="text" class="form-control" id="last_name" name="last_name" value="{{ user.last_name }}" required/>
+        </div>
+        <div class="mb-3">
+            <label for="age">Age</label>
+            <input type="number" class="form-control" id="age" name="age" value="{{ user.age }}" required/>
+        </div>
+        <div class="mb-3">
+            <label>Birth Date</label>
+            <input type="date" class="form-control" id="birth_date" name="birth_date" value="{{ user.birth_date }}" required/>
+        </div>
+        <div class="mb-3">
+            <label for="gender_id">Gender</label>
+            <select name="gender_id" id="gender_id" class="form-select" required>
+                <option value="">N/A</option>
+                <option value="{{ user.gender_id }}" selected hidden>{{ user.gender }}</option>
+                {% for gender in genders %}
+                    <option value="{{ gender.gender_id }}">{{gender.gender}}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button type="submit" class="btn btn-success float-end col-12 col-md-3 ">update Gender</button>
+        <a href="/users" class="btn btn-secondary float-end col-12 col-me-3 md-1">Back</a>
+
+    </form>
+</div>
+
+{% endblock content %}

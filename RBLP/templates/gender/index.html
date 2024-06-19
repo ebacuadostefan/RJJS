@@ -6,13 +6,12 @@ List of Gender
 
 {% block content %}
 
-<a href= "/gender/create" class = "btn btn-primary float-end mt-1 me-1">Add Gender</a>
 {% include "include/messages.html" %}
 <div class = "col-md-6 mx-auto">
     <div class = "table-responsive">
         <table class = "table table-hover">
             <thead>
-                <tr>
+                <tr class="op">
                     <th> Gender ID </th>
                     <th> Gender </th>
                     <th> Date Created </th>
@@ -22,7 +21,7 @@ List of Gender
             </thead>
             <tbody>
                 {% for gender in genders %}
-                    <tr>
+                    <tr class="table-row"> 
                         <td>{{gender.gender_id}}</td>
                         <td>{{gender.gender}}</td>
                         <td>{{gender.date_created}}</td>
@@ -32,12 +31,16 @@ List of Gender
                                 <a href="/gender/show/{{ gender.gender_id }}" class="btn btn-primary">View</a>
                                 <a href="/gender/edit/{{ gender.gender_id }}" class="btn btn-success">Edit</a>
                                 <a href="/gender/delete/{{ gender.gender_id }}" class="btn btn-danger">Delete</a>
+
                             </div>
                         </td>
                     </tr>
                 {% endfor %}
             </tbody>
         </table>
+        <div class="text-end">
+            <a href="/gender/create" class="btn btn-primary">Add gender</a>
+        </div>
     </div>
 </div>
 {% endblock content %}

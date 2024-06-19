@@ -6,7 +6,7 @@ List of User
 
 {% block content %}
 
-<a href= "/user/create" class = "btn btn-primary float-end mt-1 me-1">Add User</a>
+
 {% include "include/messages.html" %}
 <div class = "col-md-6 mx-auto">
     <div class = "table-responsive">
@@ -19,6 +19,8 @@ List of User
                     <th> Last Name </th> 
                     <th> Gender </th> 
                     <th> Action </th>
+
+                    
                 </tr>
             </thead>
             <tbody>
@@ -31,9 +33,9 @@ List of User
                         <td>{{user.gender}}</td>
                         <td>
                             <div class="btn-group">
-                            <a href="" class="btn btn-primary">View</a>
-                                <a href="" class="btn btn-success">Edit</a>
-                                <a href="" class="btn btn-danger">Delete</a>
+                            <a href="user/show/{{user.user_id}}" class="btn btn-primary">View</a>
+                                <a href="user/edit/{{user.user_id}}" class="btn btn-success">Edit</a>
+                                <a href="/user/delete/{{user.user_id}}" class="btn btn-danger">Delete</a>
                             <div>
                         </td>
                     </tr>
@@ -42,6 +44,9 @@ List of User
                 {% endfor %}
             </tbody>
         </table>
+        <div class="text-end">
+            <a href="/user/create" class="btn btn-primary">Add user</a>
+        </div>
     </div>
 </div>
 {% endblock content %}
