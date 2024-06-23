@@ -31,6 +31,7 @@ class Migration(migrations.Migration):
                 ('first_name', models.CharField(max_length=55)),
                 ('middle_name', models.CharField(max_length=55)),
                 ('last_name', models.CharField(max_length=55)),
+                ('address', models.CharField(max_length=55)),
                 ('age', models.IntegerField()),
                 ('birth_date', models.DateField()),
                 ('gender', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='RBLP.gender')),

@@ -19,6 +19,7 @@ class User(models.Model):
     first_name = models.CharField(max_length=55, blank=False) #VARCHAR(55) NOT NULL
     middle_name = models.CharField(max_length=55, blank=False) #VARCHAR(55) DEFAULT NULL
     last_name = models.CharField(max_length=55, blank=False) #VARCHAR(55) NOT NULL
+    address = models.CharField(max_length=55, blank=False)
     age = models.IntegerField(blank=False) #INT NOT NULL
     birth_date = models.DateField(blank=False) #DATE NOT NULL
     gender = models.ForeignKey(Gender, on_delete=models.CASCADE) 

@@ -75,7 +75,6 @@ a.btn:hover, .btn-group .btn:hover {
 body{
     background: beige;
 }
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .table-responsive {
